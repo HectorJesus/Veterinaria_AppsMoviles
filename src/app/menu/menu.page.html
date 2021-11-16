@@ -1,0 +1,87 @@
+<head>
+  <script type="module">
+    import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.menuController = menuController;
+  </script>
+</head>
+<body>
+  <ion-app>
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item (click)=consultas()>
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>Consultas</ion-label>
+          </ion-item>
+          <ion-item (click)=estetica()>
+            <ion-icon name="cut-outline" slot="start"></ion-icon>
+            <ion-label>Estetica</ion-label>
+          </ion-item>
+          <ion-item (click)=compraAnimales()>
+            <ion-icon name="cart-outline" slot="start"></ion-icon>
+            <ion-label>Compra de animales</ion-label>
+          </ion-item>
+          <ion-item (click)=adopcionAnimales()>
+            <ion-icon name="heart" slot="start"></ion-icon>
+            <ion-label>Adopcion de animales</ion-label>
+          </ion-item>
+          <ion-item routerLink="/ubicacion">
+            <ion-icon name="navigate-outline" slot="start"></ion-icon>
+            <ion-label>Como llegar</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-title>Veterinaria</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card class="boxSup">
+        <ion-card-title>Caninos</ion-card-title>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6" *ngFor="let perro of perros">
+              <ion-card class="boxDog">
+                <ion-img [src]="perro.url"></ion-img>
+                <ion-card-subtitle>Nombre</ion-card-subtitle>
+                <ion-card-title>{{perro.name}}</ion-card-title>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <ion-card class="boxSup">
+        <ion-card-title>Felinos</ion-card-title>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6" *ngFor="let gato of gatos">
+              <ion-card class="boxDog">
+                <ion-img [src]="gato.url"></ion-img>
+                <ion-card-subtitle>Nombre</ion-card-subtitle>
+                <ion-card-title>{{gato.name}}</ion-card-title>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-content>
+  </div>
+  </ion-app>
+</body>

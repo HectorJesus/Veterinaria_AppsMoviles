@@ -1,0 +1,29 @@
+.my-custom-menu {
+  --width: 500px;
+}
+
+ion-toolbar{
+  background-color: aliceblue;
+}
+
+ion-card-title{
+  text-align: center;
+  color: white;
+}
+
+ion-img{
+  padding: 1em;
+  height: 3cm;
+}
+
+.boxSup{
+  padding: 0.5em;
+  opacity: 90%;
+  background-color: rgba(0, 0, 0, .5);
+
+}
+
+.boxDog{
+  display: flex;
+  flex-direction: column;
+}
