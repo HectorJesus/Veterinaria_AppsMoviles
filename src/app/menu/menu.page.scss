@@ -1,3 +1,27 @@
+ion-content{
+  --ion-background-color: #B43A20;
+}
+
+.imgcentral{
+  position: absolute;
+  top: -10px;
+}
+
+.logo{
+  position: relative;
+  top: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  height: 2.5cm;
+  width: 2.5cm;
+}
+
+.imglogo{
+  height: 2.5cm;
+  width: 2.5cm;
+}
+
 .my-custom-menu {
   --width: 500px;
 }
@@ -9,21 +33,6 @@ ion-toolbar{
 ion-card-title{
   text-align: center;
   color: white;
+  height: 4cm;
 }
 
-ion-img{
-  padding: 1em;
-  height: 3cm;
-}
-
-.boxSup{
-  padding: 0.5em;
-  opacity: 90%;
-  background-color: rgba(0, 0, 0, .5);
-
-}
-
-.boxDog{
-  display: flex;
-  flex-direction: column;
-}

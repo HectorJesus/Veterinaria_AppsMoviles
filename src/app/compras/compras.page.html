@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Llamamos al menu-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <!-------------------->
+    <ion-title>Compra una mascota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="boxSup">
+    <ion-card-title>Caninos</ion-card-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let perro of perros">
+          <ion-card class="boxDog">
+            <ion-img [src]="perro.url"></ion-img>
+            <ion-card-title>{{perro.name}}</ion-card-title>
+            <ion-card-content>{{perro.desc}}</ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card class="boxSup">
+    <ion-card-title>Felinos</ion-card-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let gato of gatos">
+          <ion-card class="boxDog">
+            <ion-img [src]="gato.url"></ion-img>
+            <ion-card-title>{{gato.name}}</ion-card-title>
+            <ion-card-content>{{gato.desc}}</ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card class="boxSup">
+    <ion-card-title>Hamsters</ion-card-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let hamster of hamsters">
+          <ion-card class="boxDog">
+            <ion-img [src]="hamster.url"></ion-img>
+            <ion-card-title>{{hamster.name}}</ion-card-title>
+            <ion-card-content>{{hamster.desc}}</ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

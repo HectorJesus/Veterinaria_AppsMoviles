@@ -1,3 +1,58 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-app>
+    <ion-menu side="start" content-id="menuContent" menuId="main-menu">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+
+          <ion-menu-toggle auto-hide="true">
+            <ion-item routerLink="/menu">
+              <ion-icon name="menu" slot="start"></ion-icon>
+              <ion-label>Menu</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+          <ion-item routerLink="/estetica">
+              <ion-icon name="cut-outline" slot="start"></ion-icon>
+              <ion-label>Estetica</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/consultas">
+              <ion-icon name="medkit-outline" slot="start"></ion-icon>
+              <ion-label>Consultas</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/compras">
+              <ion-icon name="cart-outline" slot="start"></ion-icon>
+              <ion-label>Compra de animales</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/adopcion">
+              <ion-icon name="heart" slot="start"></ion-icon>
+              <ion-label>Adopcion de animales</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/ubicacion">
+              <ion-icon name="navigate-outline" slot="start"></ion-icon>
+              <ion-label>Como llegar</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  <ion-router-outlet id="menuContent"></ion-router-outlet>
 </ion-app>
+

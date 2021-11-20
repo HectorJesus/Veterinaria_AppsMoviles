@@ -19,6 +19,22 @@ const routes: Routes = [
     path: 'ubicacion',
     loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
   },
+  {
+    path: 'consultas',
+    loadChildren: () => import('./consultas/consultas.module').then( m => m.ConsultasPageModule)
+  },
+  {
+    path: 'estetica',
+    loadChildren: () => import('./estetica/estetica.module').then( m => m.EsteticaPageModule)
+  },
+  {
+    path: 'compras',
+    loadChildren: () => import('./compras/compras.module').then( m => m.ComprasPageModule)
+  },
+  {
+    path: 'adopcion',
+    loadChildren: () => import('./adopcion/adopcion.module').then( m => m.AdopcionPageModule)
+  },
 ];
 
 @NgModule({
